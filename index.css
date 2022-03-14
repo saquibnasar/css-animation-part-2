@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #232d5e;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px;
+  background: radial-gradient(circle, rgb(35 27 70) 0%, rgb(84 67 106) 100%);
+}
