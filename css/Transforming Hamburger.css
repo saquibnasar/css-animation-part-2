@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #aa4aff;
+}
+.toggle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    width: 100px;
+    background: transparent;
+}
+.toggle span {
+    display: block;
+    width: 80px;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    transition: .5s;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.20);
+}
+.toggle span:nth-child(1){
+    transform: translate(-50%, -50%) translateY(-22px)
+}
+.toggle span:nth-child(4){
+    transform: translate(-50%, -50%) translateY(22px)
+}
+.toggle.active span:nth-child(1){
+    transform: translate(-50%, -50%) translateY(-37px);
+    opacity: 0;
+}
+.toggle.active span:nth-child(4){
+    transform: translate(-50%, -50%) translateY(37px);
+    opacity: 0;
+}
+.toggle.active span:nth-child(2){
+    transform: translate(-50%, -50%) rotate(45deg);    
+    transition-delay: .2s;
+}
+.toggle.active span:nth-child(3){
+    transform: translate(-50%, -50%) rotate(-45deg);   
+    transition-delay: .2s; 
+}
