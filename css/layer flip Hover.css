@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background: url(../image/image6.jpg); */
+    background-size: cover;
+}
+
+.box {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: url(../image/fish\ in\ water.jpg);
+    background-size: cover;
+}
+.box::before,
+.box::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: url(../image/fish\ in\ water.jpg);
+    background-size: cover;
+    transition: 1s;
+    filter: grayscale(100%)
+    
+}
+.box::before{
+    top: 0;
+    transform-origin: top;
+    transform: perspective(500px) rotate(0deg);
+    background-position: 0 0;
+}
+.box::after{
+    bottom: 0;
+    transform-origin: bottom;
+    transform: perspective(500px) rotate(0deg);
+    /* background-position: 0 100%; */
+}
+.box:hover::before{
+    transform: perspective(500px) rotateX(270deg);
+}
+.box:hover::after{
+    transform: perspective(500px) rotateX(-270deg);
+}
