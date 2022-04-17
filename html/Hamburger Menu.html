@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/Hamburger Menu.css" />
+    <title>Hamburger Menu</title>
+  </head>
+  <body>
+    <a href="#">
+      <span class="toggle"><i class="fa-solid fa-bars toggle"></i></span>
+      <span class="toggle active"><i class="fa-solid fa-xmark"></i></span>
+    </a>
+    <script>
+      const toggle = document.querySelector(".toggle");
+      const a = document.querySelector("a");
+      a.addEventListener("click", () => {
+        toggle.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
